@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--  LIC - lista sorti -->
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Sorte po broju čokota</h2>
+
+<table>
+  <tr>
+    <th>#</th>
+	<th>Sorta</th>
+	<th>Broj čokota</th>
+	
+  </tr>
+  <tbody>
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+			   <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+			   
+            </tr>
+         {% endfor %}
+      </tbody>
+	  
+	    <a href = "/">Vrati se ...</a>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--  LIP - lista kabernea -->
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Kaberne</h2>
+
+<table>
+  <tr>
+    <th>Godina>
+	<th>Datum berbe</th>
+	<th>Ubrano(kg)</th>
+	<th>Šećer</th>
+	<th>Komentar</th>
+	<th>Mošt(lit)</th>
+	<th>Šira(lit)</th>
+	<th>Vina(lit)</th>
+	<th>Flaša(kom)</th>
+	
+	
+  </tr>
+  <tbody>
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+			   <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+			   <td>{{row[3]}}</td>
+			   <td>{{row[4]}}</td>
+			   <td>{{row[5]}}</td>
+			   <td>{{row[6]}}</td>
+			   <td>{{row[7]}}</td>
+			   <td>{{row[8]}}</td> 
+            </tr>
+         {% endfor %}
+      </tbody>
+	  
+	    <a href = "/">Vrati se ...</a>
+</table>
+
+</body>
+</html>

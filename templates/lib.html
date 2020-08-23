@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--  LIB - lista berbi -->
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Berbe</h2>
+
+<table>
+  <tr>
+    <th>Godina>
+	<th>Datum</th>
+	<th>Sorta</th>
+	<th>Mošt(lit)</th>
+	<th>Šećer</th>
+	
+  </tr>
+  <tbody>
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+			   <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+			   <td>{{row[3]}}</td>
+			   <td>{{row[4]}}</td>
+            </tr>
+         {% endfor %}
+      </tbody>
+	  
+	    <a href = "/">Vrati se ...</a>
+</table>
+
+</body>
+</html>
